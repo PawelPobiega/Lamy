@@ -2,11 +2,11 @@ import random, time
 import bext
 
 def print_instructions():
-    print("Witaj w grze Hodowca Lam!")
-    print("Twoim celem jest hodowanie jak największej ilości lam.")
-    print("Każdej nocy Twoje lamy rozmnażają się, ale zdarzają się też choroby.")
-    print("Uważaj, aby nie dopuścić do śmierci wszystkich swoich lam!")
-    print("Powodzenia!")
+    print("Welcome in The Llama Game!")
+    print("The goal is to have llamas")
+    print("New llamas are born each night, but there are also diseases.")
+    print("If all llamas die, game ends.")
+    print("Good luck!")
     print("")
 
 def roll_dice(n):
