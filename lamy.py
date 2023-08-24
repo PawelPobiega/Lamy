@@ -16,29 +16,29 @@ def play_game(num_lam):
     days = 0
     lam_alive = num_lam
     simspeed=2.5
-    simspeedsetting=input("Podaj szybkość symulacji(min. 0.5, max. 5 lub light(nieskończenie szybkie))")
+    simspeedsetting=input("Enter simulation speed(0.5 - 5 or 'light')")
     if simspeedsetting=='light':
         simspeed=0
     else:
         try:
             simspeedsetting=float(simspeedsetting)
         except ValueError:
-            print("Podaj liczbę lub 'light'")
+            print("Enter number")
         if simspeedsetting>=0.5 and simspeedsetting<=5:
             simspeed/=simspeedsetting
         else:
             print("Podałeś za wysoką lub za niską prędkość.")
             play_game(num_lam)
 
-    print("Podaj trudność gry - (T)rudny, (N)ormalny, (P)oczątkujący, (S)andbox")
+    print("Enter game mode((H)ard, (N)ormal, (E)asy, (S)andbox")
     setting=input()
-    if setting=='T':
+    if setting=='H':
         diffborn=4
         diffdied=5
     elif setting=='N':
         diffborn=4
         diffdied=4
-    elif setting=='P':
+    elif setting=='E':
         diffborn=4
         diffdied=2
     elif setting=='S':
@@ -48,7 +48,7 @@ def play_game(num_lam):
     while lam_alive > 0:
         days += 1
         bext.fg('yellow')
-        print("Dzień", days)
+        print("Day", days)
         
         lam_born = roll_dice(diffborn)
         lam_died = roll_dice(diffdied)
