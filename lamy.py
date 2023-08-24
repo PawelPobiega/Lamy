@@ -56,25 +56,23 @@ def play_game(num_lam):
 
         if lam_born > 1:
             bext.fg('green')
-            print("Urodziły się {} małe lamy!".format(lam_born))
+            print("{} llamas were born!".format(lam_born))
             lam_alive += lam_born
         elif lam_born == 1:
             bext.fg('green')
-            print("Urodziła się mała lama!")
+            print("One llama was born!")
             num_lam += 1
         else:
-            print("Żadne lamy się nie urodziły.")
+            print("No llamas were born.")
             
         if lam_died > 0:
             bext.fg('purple')
-            print("Pojawiła się choroba!")
+            print("DISEASE!")
             bext.fg('red')
-            if lam_died>1 and lam_died<5:
-                print(lam_died, "lamy zmarły.")
-            elif lam_died>4:
-                print(lam_died, "lam zmarło.")
+            if lam_died>1:
+                print(lam_died, "llamas died.")
             else:
-                print("1 lama zmarła")
+                print("One llama died")
             lam_alive -= lam_died
         
         if lam_alive>lam_yesterday:
@@ -83,10 +81,10 @@ def play_game(num_lam):
             bext.fg('yellow')
         else:
             bext.fg('red')
-        print("Aktualna liczba lam:", lam_alive)
+        print("Llamas:", lam_alive)
         print()
         time.sleep(simspeed)
-    print("Koniec gry! Przetrwałeś", days, "dni, a Twoje lamy umarły :(")
+    print("GAME OVER! Game length: ", days, " days.")
 
 def main():
     print_instructions()
