@@ -94,4 +94,4 @@ a=True
 while a:
     bext.fg('yellow')
     main()
-    a=input("Czy chcesz zagrać jeszcze raz?1-tak,0-nie")
+    a=input("Play again? 1-Yes, 0-No")
