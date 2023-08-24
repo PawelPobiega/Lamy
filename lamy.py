@@ -3,7 +3,7 @@ import bext
 
 def print_instructions():
     print("Welcome in The Llama Game!")
-    print("The goal is to have llamas")
+    print("The goal is to raise llamas")
     print("New llamas are born each night, but there are also diseases.")
     print("If all llamas die, game ends.")
     print("Good luck!")
